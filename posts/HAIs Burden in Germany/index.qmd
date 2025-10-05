@@ -1,0 +1,98 @@
+---
+title: "Germany’s Hidden Hospital Infection Burden: What the BHAI R Package Revealed"
+author: "Tzu-Hsuan, Yang"
+date: "2025-10-05"
+categories: [analysis, public health]
+---
+
+Healthcare-associated infections (HAIs) are a major global health issue, associated with increased morbidity, mortality, and rising healthcare costs. Estimate suggests that 20–30% of HAIs happend in Germany could be prevented with better hygiene and procedures. 
+
+This post summarises Germany’s HAI burden (incidence, deaths, and disability-adjusted life years; DALYs) for five common HAIs: healthcare-associated *Clostridioides difficile* infection (CDI), healthcare-associated pneumonia (HAP), healthcare-associated primary bloodstream infections (BSI), healthcare-associated urinary tract infections (UTI), and surgical site infections (SSI) in 2011 and compares it with the EU/EEA average, using results from Zacher et al. (2019).
+
+The estimates come from the ECDC Point Prevalence Survey (PPS) of HAIs (2011–2012), covering 46 representative hospitals in Germany, 1,149 hospitals across 29 EU/EEA countries, and Croatia.
+
+All calculations were implemented in the **BHAI R package**, which performs a predefined number of Monte Carlo simulations. The workflow (@fig-workflow) consisted of five main steps:
+1. Estimate hospital prevalence of HAIs from PPS data.
+2. Convert prevalence to hospital incidence using a modified Rhame–Sudderth formula and length-of-infection adjustments.
+3. Extrapolate incidence to the population level using hospital discharge data in Germany.
+4. Stratify by age and sex to reflect different life expectancies.
+5. Adjust for different life expectancies using McCabe scores, outcome trees, and Monte Carlo simulations.
+
+![Workflow of the estimation of the burden of healthcare-associated infections implemented in the BHAI R package. Source: Zacher et al. (2019).](figure1.png){#fig-workflow width=75%}
+
+Using BHAI, the team estimated **about 478,200 HAI cases in Germany** in a single year — leading to **16,200 attributable deaths** and a total of **248,900 disability-adjusted life years (DALYs)**.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-contributedburden
+#| tbl-cap: "Estimated median of annual burden of five types of healthcare-associated infections in Germany, based on ECDC PPS data (2011–2012). Source: Zacher et al. (2019)."
+#| tbl-cap-location: bottom
+# Packages
+library(tidyverse)
+library(gt)
+
+# Data from Zacher et al. (2019), Table 1 (medians)
+hais_tbl <- tribble(
+  ~Type, ~Cases, ~Deaths, ~DALYs,
+  "HAP (pneumonia)", 106586, 3968, 69508,
+  "SSI (surgical site)", 93222, 2328, 28842,
+  "BSI (bloodstream)", 26976, 3905, 58350,
+  "UTI (urinary tract)", 214150, 3664, 66701,
+  "CDI (C. difficile)", 36002, 1917, 20890,
+  "Total (all HAIs)", 478222, 16245, 248920
+) |>
+  mutate(Type = factor(
+    Type,
+    levels = c(
+      "UTI (urinary tract)",
+      "HAP (pneumonia)",
+      "BSI (bloodstream)",
+      "SSI (surgical site)",
+      "CDI (C. difficile)",
+      "Total (all HAIs)"
+    )
+  ))
+
+hais_tbl |>
+  gt() |>
+  fmt_number(
+    columns = c(Cases, Deaths, DALYs),
+    decimals = 0,
+    use_seps = TRUE
+  ) |>
+  tab_style(
+    style = list(cell_text(weight = "bold")),
+    locations = cells_column_labels()
+  ) |>
+  tab_options(
+    table.width = pct(75),
+    table.font.size = px(15),
+    data_row.padding = px(6),
+    heading.align = "left",
+  )
+```
+@tbl-contributedburden summarises how different infection types contributed to the total burden.
+
+As shown in @fig-results, while Germany had a **lower infection rate inside hospitals** than the European Union average, its overall **population burden** was *higher* — **308 DALYs per 100,000 people**, compared with **290 DALYs per 100,000** across the EU/EEA. This indicates that Germany experiences a high burden. These results raise a key question: if infection rates are low, why is the burden still higher?
+
+![Annual burden of five types of healthcare-associated infections with (A) attributable deaths per 100,000 population and (B) disability-adjusted life years per 100,000 population, Germany vs EU/EEA, 2011–2012. Source: Zacher et al. (2019).](figure3.png){#fig-results width=75%}
+
+**Why is Germany’s burden above the EU/EEA average?** 
+
+Germany has one of the highest rates of hospital admissions and the largest number of acute care beds in Europe. This means more people are exposed to potential infections — even if hospitals themselves perform well on hygiene standards.[^1]
+
+[^1]: These estimates should be interpreted with caution, as they rely on outcome trees informed by limited evidence, and on European McCabe score distributions, which may underestimate the German burden.
+
+To reduce this burden, researchers recommend:
+
+- **Reducing avoidable hospital stays**
+- **Focusing further on hygiene measures**
+- **Enhancing infection prevention and control**
+
+In conclusion, Germany’s experience shows that reducing hospital use can be as powerful as improving hygiene — and the open-source BHAI tool makes such insights measurable for every country.
+
+Reference:
+
+Zacher B, Haller S, Willrich N, et al. Application of a new methodology and R package reveals a high burden of healthcare-associated infections (HAI) in Germany compared to the average in the European Union/European Economic Area, 2011 to 2012. Euro Surveill. 2019;24(46):1900135. [https://doi.org/10.2807/1560-7917.ES.2019.24.46.1900135](https://doi.org/10.2807/1560-7917.ES.2019.24.46.1900135)

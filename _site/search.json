@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "posts/HAIs Burden in Germany/index.html",
+    "href": "posts/HAIs Burden in Germany/index.html",
+    "title": "Germany’s Hidden Hospital Infection Burden: What the BHAI R Package Revealed",
+    "section": "",
+    "text": "Healthcare-associated infections (HAIs) are a major global health issue, associated with increased morbidity, mortality, and rising healthcare costs. Estimate suggests that 20–30% of HAIs happend in Germany could be prevented with better hygiene and procedures.\nThis post summarises Germany’s HAI burden (incidence, deaths, and disability-adjusted life years; DALYs) for five common HAIs: healthcare-associated Clostridioides difficile infection (CDI), healthcare-associated pneumonia (HAP), healthcare-associated primary bloodstream infections (BSI), healthcare-associated urinary tract infections (UTI), and surgical site infections (SSI) in 2011 and compares it with the EU/EEA average, using results from Zacher et al. (2019).\nThe estimates come from the ECDC Point Prevalence Survey (PPS) of HAIs (2011–2012), covering 46 representative hospitals in Germany, 1,149 hospitals across 29 EU/EEA countries, and Croatia.\nAll calculations were implemented in the BHAI R package, which performs a predefined number of Monte Carlo simulations. The workflow (Figure 1) consisted of five main steps: 1. Estimate hospital prevalence of HAIs from PPS data. 2. Convert prevalence to hospital incidence using a modified Rhame–Sudderth formula and length-of-infection adjustments. 3. Extrapolate incidence to the population level using hospital discharge data in Germany. 4. Stratify by age and sex to reflect different life expectancies. 5. Adjust for different life expectancies using McCabe scores, outcome trees, and Monte Carlo simulations.\nUsing BHAI, the team estimated about 478,200 HAI cases in Germany in a single year — leading to 16,200 attributable deaths and a total of 248,900 disability-adjusted life years (DALYs).\nType\nCases\nDeaths\nDALYs\n\n\n\n\nHAP (pneumonia)\n106,586\n3,968\n69,508\n\n\nSSI (surgical site)\n93,222\n2,328\n28,842\n\n\nBSI (bloodstream)\n26,976\n3,905\n58,350\n\n\nUTI (urinary tract)\n214,150\n3,664\n66,701\n\n\nCDI (C. difficile)\n36,002\n1,917\n20,890\n\n\nTotal (all HAIs)\n478,222\n16,245\n248,920\n\n\n\n\n\n\n\n\nTable 1: Estimated median of annual burden of five types of healthcare-associated infections in Germany, based on ECDC PPS data (2011–2012). Source: Zacher et al. (2019).\nTable 1 summarises how different infection types contributed to the total burden.\nAs shown in Figure 2, while Germany had a lower infection rate inside hospitals than the European Union average, its overall population burden was higher — 308 DALYs per 100,000 people, compared with 290 DALYs per 100,000 across the EU/EEA. This indicates that Germany experiences a high burden. These results raise a key question: if infection rates are low, why is the burden still higher?\nWhy is Germany’s burden above the EU/EEA average?\nGermany has one of the highest rates of hospital admissions and the largest number of acute care beds in Europe. This means more people are exposed to potential infections — even if hospitals themselves perform well on hygiene standards.1\nTo reduce this burden, researchers recommend:\nIn conclusion, Germany’s experience shows that reducing hospital use can be as powerful as improving hygiene — and the open-source BHAI tool makes such insights measurable for every country.\nReference:\nZacher B, Haller S, Willrich N, et al. Application of a new methodology and R package reveals a high burden of healthcare-associated infections (HAI) in Germany compared to the average in the European Union/European Economic Area, 2011 to 2012. Euro Surveill. 2019;24(46):1900135. https://doi.org/10.2807/1560-7917.ES.2019.24.46.1900135"
+  },
+  {
+    "objectID": "posts/HAIs Burden in Germany/index.html#footnotes",
+    "href": "posts/HAIs Burden in Germany/index.html#footnotes",
+    "title": "Germany’s Hidden Hospital Infection Burden: What the BHAI R Package Revealed",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThese estimates should be interpreted with caution, as they rely on outcome trees informed by limited evidence, and on European McCabe score distributions, which may underestimate the German burden.↩︎"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "Hi, I’m Tzu-Hsuan Yang — a Master of Business Analytics student at Monash University, with a background in accounting and auditing. Please feel free to call me Shayna. Previously, I worked at Deloitte Taiwan, where I assisted with financial audits and internal control reviews. I’m now expanding my skills in R programming, data visualization, and reproducible analytics using Quarto. Outside of work and study, I enjoy coffee, working late at night, listening to music, and playing PC games.\n\nEducational Background\n\nMonash University\nMaster of Business Analytics | Feb. 2025 - NOW\nNational Changhua University of Education\nBachelor of Business Administration Department of Accounting, College of Management | Sep. 2019 - Jun. 2023\n\n\n\nEmployment History\n\nDeloitte & Touche Taiwan\nAuditor | Sep. 2023 - May 2024"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ETC5523 Blog Assessment",
+    "section": "",
+    "text": "Germany’s Hidden Hospital Infection Burden: What the BHAI R Package Revealed\n\n\n\nanalysis\n\npublic health\n\n\n\n\n\n\n\n\n\nOct 5, 2025\n\n\nTzu-Hsuan, Yang\n\n\n\n\n\nNo matching items"
+  }
+]
