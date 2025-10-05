@@ -12,6 +12,7 @@ This post summarises Germany’s HAI burden (incidence, deaths, and disability-a
 The estimates come from the ECDC Point Prevalence Survey (PPS) of HAIs (2011–2012), covering 46 representative hospitals in Germany, 1,149 hospitals across 29 EU/EEA countries, and Croatia.
 
 All calculations were implemented in the **BHAI R package**, which performs a predefined number of Monte Carlo simulations. The workflow (@fig-workflow) consisted of five main steps:
+
 1. Estimate hospital prevalence of HAIs from PPS data.
 2. Convert prevalence to hospital incidence using a modified Rhame–Sudderth formula and length-of-infection adjustments.
 3. Extrapolate incidence to the population level using hospital discharge data in Germany.
