@@ -1,13 +1,31 @@
 ---
-title: "About"
+title: "About Me"
 image: profile.jpg
 about:
-  template: jolla
+  template: trestles
+  image-shape: round
+  image-width: 15em
   links:
     - icon: github
       text: Github
-      href: https://github.com/etc5523-2022
-
+      href: https://github.com/Shayna-Yang
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/tzu-hsuan-yang-4583b1353/
+    - icon: envelope
+      text: Email
+      href: mailto:tyan0082@student.monash.edu
 ---
 
-This is a blog template for the ETC5523 Communicating with Data assessment at Monash University.
+Hi, I’m Shayna Yang — a student of Master of Business Analytics at Monash University with a background in accounting and auditing. Previously, I worked at Deloitte Taiwan, where I assisted with financial audits and internal control reviews. I’m now expanding my skills in R programming, data visualization, and reproducible analytics using Quarto. Outside of work and study, I enjoy coffee, working late at night, listening to music, and playing PC games.
+
+#### Educational Background 
+- **Monash University**  
+    Master of Business Analytics | Feb. 2025 - NOW
+- **National Changhua University of Education**  
+    Bachelor of Business Administration Department of Accounting, College of Management | Sep. 2019 - Jun. 2023
+
+
+#### Employment History 
+- **Deloitte & Touche Taiwan**  
+    Auditor | Sep. 2023 - May 2024
