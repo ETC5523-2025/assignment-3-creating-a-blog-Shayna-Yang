@@ -4,7 +4,42 @@
     "href": "posts/HAIs Burden in Germany/index.html",
     "title": "Germany’s Hidden Hospital Infection Burden: What the BHAI R Package Revealed",
     "section": "",
-    "text": "Healthcare-associated infections (HAIs) are a major global health issue, associated with increased morbidity, mortality, and rising healthcare costs. Estimate suggests that 20–30% of HAIs happend in Germany could be prevented with better hygiene and procedures.\nThis post summarises Germany’s HAI burden (incidence, deaths, and disability-adjusted life years; DALYs) for five common HAIs: healthcare-associated Clostridioides difficile infection (CDI), healthcare-associated pneumonia (HAP), healthcare-associated primary bloodstream infections (BSI), healthcare-associated urinary tract infections (UTI), and surgical site infections (SSI) in 2011 and compares it with the EU/EEA average, using results from Zacher et al. (2019).\nThe estimates come from the ECDC Point Prevalence Survey (PPS) of HAIs (2011–2012), covering 46 representative hospitals in Germany, 1,149 hospitals across 29 EU/EEA countries, and Croatia.\nAll calculations were implemented in the BHAI R package, which performs a predefined number of Monte Carlo simulations. The workflow (Figure 1) consisted of five main steps:\nUsing BHAI, the team estimated about 478,200 HAI cases in Germany in a single year — leading to 16,200 attributable deaths and a total of 248,900 disability-adjusted life years (DALYs).\nType\nCases\nDeaths\nDALYs\n\n\n\n\nHAP (pneumonia)\n106,586\n3,968\n69,508\n\n\nSSI (surgical site)\n93,222\n2,328\n28,842\n\n\nBSI (bloodstream)\n26,976\n3,905\n58,350\n\n\nUTI (urinary tract)\n214,150\n3,664\n66,701\n\n\nCDI (C. difficile)\n36,002\n1,917\n20,890\n\n\nTotal (all HAIs)\n478,222\n16,245\n248,920\n\n\n\n\n\n\n\n\nTable 1: Estimated median of annual burden of five types of healthcare-associated infections in Germany, based on ECDC PPS data (2011–2012). Source: Zacher et al. (2019).\nTable 1 summarises how different infection types contributed to the total burden.\nAs shown in Figure 2, while Germany had a lower infection rate inside hospitals than the European Union average, its overall population burden was higher — 308 DALYs per 100,000 people, compared with 290 DALYs per 100,000 across the EU/EEA. This indicates that Germany experiences a high burden. These results raise a key question: if infection rates are low, why is the burden still higher?\nWhy is Germany’s burden above the EU/EEA average?\nGermany has one of the highest rates of hospital admissions and the largest number of acute care beds in Europe. This means more people are exposed to potential infections — even if hospitals themselves perform well on hygiene standards.1\nTo reduce this burden, researchers recommend:\nIn conclusion, Germany’s experience shows that reducing hospital use can be as powerful as improving hygiene — and the open-source BHAI tool makes such insights measurable for every country.\nReference:\nZacher B, Haller S, Willrich N, et al. Application of a new methodology and R package reveals a high burden of healthcare-associated infections (HAI) in Germany compared to the average in the European Union/European Economic Area, 2011 to 2012. Euro Surveill. 2019;24(46):1900135. https://doi.org/10.2807/1560-7917.ES.2019.24.46.1900135"
+    "text": "Healthcare-associated infections (HAIs) are a major global health issue, associated with increased morbidity, mortality, and rising healthcare costs. Estimates suggest that 20–30% of HAIs in Germany could be prevented through improved hygiene and clinical procedures.\nThis post summarises Germany’s HAI burden (incidence, deaths, and disability-adjusted life years; DALYs) for five common HAIs: healthcare-associated Clostridioides difficile infection (CDI), healthcare-associated pneumonia (HAP), healthcare-associated primary bloodstream infections (BSI), healthcare-associated urinary tract infections (UTI), and surgical site infections (SSI) in 2011 and compares it with the EU/EEA average, using results from Zacher et al. (2019)."
+  },
+  {
+    "objectID": "posts/HAIs Burden in Germany/index.html#methodology",
+    "href": "posts/HAIs Burden in Germany/index.html#methodology",
+    "title": "Germany’s Hidden Hospital Infection Burden: What the BHAI R Package Revealed",
+    "section": "Methodology",
+    "text": "Methodology\nThe estimates come from the ECDC Point Prevalence Survey (PPS) of HAIs (2011–2012), covering 46 representative hospitals in Germany, 1,149 hospitals across 29 EU/EEA countries, and Croatia.\nAll calculations were implemented in the BHAI R package, which performs a predefined number of Monte Carlo simulations. The workflow (Figure 1) consisted of five main steps:\n\nEstimate hospital prevalence of HAIs from PPS data.\nConvert prevalence to hospital incidence using a modified Rhame–Sudderth formula and length-of-infection adjustments.\nExtrapolate incidence to the population level using hospital discharge data in Germany.\nStratify by age and sex to reflect different life expectancies.\nAdjust for different life expectancies using McCabe scores, outcome trees, and Monte Carlo simulations.\n\n\n\n\n\n\n\nFigure 1: Workflow of the estimation of the burden of healthcare-associated infections implemented in the BHAI R package. Source: Zacher et al. (2019).\n\n\n\nUsing BHAI, the team estimated about 478,200 HAI cases in Germany in a single year — leading to 16,200 attributable deaths and a total of 248,900 disability-adjusted life years (DALYs).\n\n\n\n\n\n\n\n\n\n\n\nType\nCases\nDeaths\nDALYs\n\n\n\n\nHAP (pneumonia)\n106,586\n3,968\n69,508\n\n\nSSI (surgical site)\n93,222\n2,328\n28,842\n\n\nBSI (bloodstream)\n26,976\n3,905\n58,350\n\n\nUTI (urinary tract)\n214,150\n3,664\n66,701\n\n\nCDI (C. difficile)\n36,002\n1,917\n20,890\n\n\nTotal (all HAIs)\n478,222\n16,245\n248,920\n\n\n\n\n\n\n\n\nTable 1: Estimated median of annual burden of five types of healthcare-associated infections in Germany, based on ECDC PPS data (2011–2012). Source: Zacher et al. (2019).\n\n\n\n\nTable 1 summarises how different infection types contributed to the total burden.\nThese estimates form the basis for the following sections, which explore Germany’s overall burden, infection types, and demographic patterns."
+  },
+  {
+    "objectID": "posts/HAIs Burden in Germany/index.html#overall-burden-trends",
+    "href": "posts/HAIs Burden in Germany/index.html#overall-burden-trends",
+    "title": "Germany’s Hidden Hospital Infection Burden: What the BHAI R Package Revealed",
+    "section": "Overall burden trends",
+    "text": "Overall burden trends\nAs shown in Figure 2, while Germany had a lower infection rate inside hospitals than the European Union average, its overall population burden was higher — 308 DALYs per 100 000 people, compared with 290 DALYs per 100 000 across the EU/EEA. This indicates that Germany experiences a high burden.\n\n\n\n\n\n\nFigure 2: Annual burden of five types of healthcare-associated infections with (A) attributable deaths per 100,000 population and (B) disability-adjusted life years per 100,000 population, Germany vs EU/EEA, 2011–2012. Source: Zacher et al. (2019).\n\n\n\nThis national overview provides the big picture. To understand where these numbers come from, we can look closer at how different infection types contribute to the total burden."
+  },
+  {
+    "objectID": "posts/HAIs Burden in Germany/index.html#detailed-comparison-across-infection-types",
+    "href": "posts/HAIs Burden in Germany/index.html#detailed-comparison-across-infection-types",
+    "title": "Germany’s Hidden Hospital Infection Burden: What the BHAI R Package Revealed",
+    "section": "Detailed comparison across infection types",
+    "text": "Detailed comparison across infection types\nWhile Figure 2 shows the overall pattern, the numerical estimates in Figure 3 break down the burden by infection type. Germany’s infection rates and burden indicators were consistently higher than those of the EU/EEA across all five infections. The annual population incidence reached 592 per 100 000 in Germany versus 468 per 100 000 in the EU/EEA. Similarly, attributable deaths were 20.1 vs 15.3 per 100 000, and DALYs 308 vs 290 per 100 000.\nAmong infection types, pneumonia (HAP) and bloodstream infections (BSI) accounted for most of the difference, driven by their higher fatality rates. By contrast, urinary tract infections (UTIs) were more frequent but caused a smaller share of DALYs, while C. difficile infections (CDI), though rarer, still added a notable contribution.\n\n\n\n\n\n\nFigure 3: Annual burden per 100,000 population of five types of healthcare-associated infections, German PPS sample and ECDC PPS sample (EU/EEA), 2011–2012. Source: Zacher et al. (2019)."
+  },
+  {
+    "objectID": "posts/HAIs Burden in Germany/index.html#burden-by-age-and-gender",
+    "href": "posts/HAIs Burden in Germany/index.html#burden-by-age-and-gender",
+    "title": "Germany’s Hidden Hospital Infection Burden: What the BHAI R Package Revealed",
+    "section": "Burden by Age and Gender",
+    "text": "Burden by Age and Gender\nBeyond infection type, demographic factors also shape the burden. As shown in Figure 4, DALYs increase sharply with age, peaking among adults aged 75–84 years. Older age groups carry the majority of total health loss, reflecting their higher hospitalisation rates and vulnerability to severe outcomes.\nGender differences are smaller but consistent: across most age groups, men experience higher DALYs per 100 000 population than women. This likely reflects higher comorbidity and disease severity among men, while women’s longer life expectancy and greater representation in long-term care explain the small reversal seen at the oldest ages.\nGermany’s ageing population amplifies these effects, helping explain why its population-level burden remains above the EU/EEA average even when hospital infection rates are comparable.\n\n\n\n\n\n\nFigure 4: Total annual burden of five types of healthcare-associated infections stratified by age and sex, Germany (left) and EU/EEA (right), 2011–2012. Source: Zacher et al. (2019)."
+  },
+  {
+    "objectID": "posts/HAIs Burden in Germany/index.html#why-is-germanys-burden-above-the-eueea-average",
+    "href": "posts/HAIs Burden in Germany/index.html#why-is-germanys-burden-above-the-eueea-average",
+    "title": "Germany’s Hidden Hospital Infection Burden: What the BHAI R Package Revealed",
+    "section": "Why is Germany’s burden above the EU/EEA average?",
+    "text": "Why is Germany’s burden above the EU/EEA average?\nThese results raise a key question: if infection rates are low, why is the burden still higher?\nGermany has one of the highest hospital admission rates and the largest number of acute care beds in Europe. This means more people are exposed to potential infections — even if hospitals themselves perform well on hygiene standards.1\nTo reduce this burden, researchers recommend:\n\nReducing avoidable hospital stays\nFocusing further on hygiene measures\nEnhancing infection prevention and control\n\nIn conclusion, Germany’s experience shows that reducing hospital use can be as powerful as improving hygiene — and the open-source BHAI tool makes such insights measurable for every country. As up to 30% of HAIs are preventable, these findings highlight how data-driven methods can guide smarter prevention strategies across Europe.\nReference:\nZacher B, Haller S, Willrich N, et al. Application of a new methodology and R package reveals a high burden of healthcare-associated infections (HAI) in Germany compared to the average in the European Union/European Economic Area, 2011 to 2012. Euro Surveill. 2019;24(46):1900135. https://doi.org/10.2807/1560-7917.ES.2019.24.46.1900135"
   },
   {
     "objectID": "posts/HAIs Burden in Germany/index.html#footnotes",
@@ -12,6 +47,13 @@
     "title": "Germany’s Hidden Hospital Infection Burden: What the BHAI R Package Revealed",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nThese estimates should be interpreted with caution, as they rely on outcome trees informed by limited evidence, and on European McCabe score distributions, which may underestimate the German burden.↩︎"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Posts",
+    "section": "",
+    "text": "Germany’s Hidden Hospital Infection Burden: What the BHAI R Package Revealed\n\n\n\nanalysis\n\npublic health\n\n\n\n\n\n\n\n\n\nOct 10, 2025\n\n\nTzu-Hsuan, Yang\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -23,8 +65,8 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Blog",
+    "title": "Welcome",
     "section": "",
-    "text": "Germany’s Hidden Hospital Infection Burden: What the BHAI R Package Revealed\n\n\n\nanalysis\n\npublic health\n\n\n\n\n\n\n\n\n\nOct 5, 2025\n\n\nTzu-Hsuan, Yang\n\n\n\n\n\nNo matching items"
+    "text": "Hi, I’m Shayna Yang\n\nMaster of Business Analytics, Monash University | Former Auditor\nThis website showcases my work for the ETC5523 course.\n\nExplore My Blog » About Me »"
   }
 ]

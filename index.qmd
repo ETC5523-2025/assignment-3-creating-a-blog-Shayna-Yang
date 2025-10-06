@@ -1,14 +1,23 @@
 ---
-title: "Blog"
-listing:
-  contents: posts
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: false
-  filter-ui: false
+title: "Welcome"
 page-layout: full
-title-block-banner: true
 ---
 
+<center>
 
+![](Home.JPG){width="350" style="border-radius: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); margin-top: 10px;"}
+
+# Hi, I'm **Shayna Yang**
+
+---
+
+Master of Business Analytics, Monash University | Former Auditor
+
+This website showcases my work for the *ETC5523* course.
+
+---
+
+[Explore My Blog »](blog.qmd){.btn .btn-primary .me-2}
+[About Me »](about.qmd){.btn .btn-outline-secondary}
+
+</center>

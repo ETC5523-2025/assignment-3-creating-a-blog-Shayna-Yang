@@ -26,3 +26,13 @@ body {
   padding: 1rem 0 !important;
   margin-top: 2rem !important;
 }
+
+img, figure {
+  border: none !important;
+  border-radius: 6px;
+}
+
+img:not(figure img) {
+  border: 3px solid #AEC3B0;
+  border-radius: 6px;
+}

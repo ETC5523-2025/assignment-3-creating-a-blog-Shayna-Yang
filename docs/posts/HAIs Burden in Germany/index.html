@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Tzu-Hsuan, Yang">
-<meta name="dcterms.date" content="2025-10-05">
+<meta name="dcterms.date" content="2025-10-10">
 
 <title>Germany’s Hidden Hospital Infection Burden: What the BHAI R Package Revealed – Shayna Yang</title>
 <style>
@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -90,6 +90,16 @@ ul.task-list li input[type="checkbox"] {
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
@@ -132,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 5, 2025</p>
+        <p class="date">October 10, 2025</p>
       </div>
     </div>
     
@@ -143,7 +153,19 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link active" data-scroll-target="#methodology">Methodology</a></li>
+  <li><a href="#overall-burden-trends" id="toc-overall-burden-trends" class="nav-link" data-scroll-target="#overall-burden-trends">Overall burden trends</a></li>
+  <li><a href="#detailed-comparison-across-infection-types" id="toc-detailed-comparison-across-infection-types" class="nav-link" data-scroll-target="#detailed-comparison-across-infection-types">Detailed comparison across infection types</a></li>
+  <li><a href="#burden-by-age-and-gender" id="toc-burden-by-age-and-gender" class="nav-link" data-scroll-target="#burden-by-age-and-gender">Burden by Age and Gender</a></li>
+  <li><a href="#why-is-germanys-burden-above-the-eueea-average" id="toc-why-is-germanys-burden-above-the-eueea-average" class="nav-link" data-scroll-target="#why-is-germanys-burden-above-the-eueea-average">Why is Germany’s burden above the EU/EEA average?</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -151,8 +173,10 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Healthcare-associated infections (HAIs) are a major global health issue, associated with increased morbidity, mortality, and rising healthcare costs. Estimate suggests that 20–30% of HAIs happend in Germany could be prevented with better hygiene and procedures.</p>
+<p>Healthcare-associated infections (HAIs) are a major global health issue, associated with increased morbidity, mortality, and rising healthcare costs. Estimates suggest that 20–30% of HAIs in Germany could be prevented through improved hygiene and clinical procedures.</p>
 <p>This post summarises Germany’s HAI burden (incidence, deaths, and disability-adjusted life years; DALYs) for five common HAIs: healthcare-associated <em>Clostridioides difficile</em> infection (CDI), healthcare-associated pneumonia (HAP), healthcare-associated primary bloodstream infections (BSI), healthcare-associated urinary tract infections (UTI), and surgical site infections (SSI) in 2011 and compares it with the EU/EEA average, using results from Zacher et al.&nbsp;(2019).</p>
+<section id="methodology" class="level2">
+<h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
 <p>The estimates come from the ECDC Point Prevalence Survey (PPS) of HAIs (2011–2012), covering 46 representative hospitals in Germany, 1,149 hospitals across 29 EU/EEA countries, and Croatia.</p>
 <p>All calculations were implemented in the <strong>BHAI R package</strong>, which performs a predefined number of Monte Carlo simulations. The workflow (<a href="#fig-workflow" class="quarto-xref">Figure&nbsp;1</a>) consisted of five main steps:</p>
 <ol type="1">
@@ -178,23 +202,23 @@ Figure&nbsp;1: Workflow of the estimation of the burden of healthcare-associated
 <figure class="quarto-float quarto-float-tbl figure">
 <div aria-describedby="tbl-contributedburden-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="xdtmdtbicg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#xdtmdtbicg table {
+<div id="jxhzimfcir" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#jxhzimfcir table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#xdtmdtbicg thead, #xdtmdtbicg tbody, #xdtmdtbicg tfoot, #xdtmdtbicg tr, #xdtmdtbicg td, #xdtmdtbicg th {
+#jxhzimfcir thead, #jxhzimfcir tbody, #jxhzimfcir tfoot, #jxhzimfcir tr, #jxhzimfcir td, #jxhzimfcir th {
   border-style: none;
 }
 
-#xdtmdtbicg p {
+#jxhzimfcir p {
   margin: 0;
   padding: 0;
 }
 
-#xdtmdtbicg .gt_table {
+#jxhzimfcir .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -220,12 +244,12 @@ Figure&nbsp;1: Workflow of the estimation of the burden of healthcare-associated
   border-left-color: #D3D3D3;
 }
 
-#xdtmdtbicg .gt_caption {
+#jxhzimfcir .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#xdtmdtbicg .gt_title {
+#jxhzimfcir .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -237,7 +261,7 @@ Figure&nbsp;1: Workflow of the estimation of the burden of healthcare-associated
   border-bottom-width: 0;
 }
 
-#xdtmdtbicg .gt_subtitle {
+#jxhzimfcir .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -249,7 +273,7 @@ Figure&nbsp;1: Workflow of the estimation of the burden of healthcare-associated
   border-top-width: 0;
 }
 
-#xdtmdtbicg .gt_heading {
+#jxhzimfcir .gt_heading {
   background-color: #FFFFFF;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -261,13 +285,13 @@ Figure&nbsp;1: Workflow of the estimation of the burden of healthcare-associated
   border-right-color: #D3D3D3;
 }
 
-#xdtmdtbicg .gt_bottom_border {
+#jxhzimfcir .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xdtmdtbicg .gt_col_headings {
+#jxhzimfcir .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -282,7 +306,7 @@ Figure&nbsp;1: Workflow of the estimation of the burden of healthcare-associated
   border-right-color: #D3D3D3;
 }
 
-#xdtmdtbicg .gt_col_heading {
+#jxhzimfcir .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -302,7 +326,7 @@ Figure&nbsp;1: Workflow of the estimation of the burden of healthcare-associated
   overflow-x: hidden;
 }
 
-#xdtmdtbicg .gt_column_spanner_outer {
+#jxhzimfcir .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -314,15 +338,15 @@ Figure&nbsp;1: Workflow of the estimation of the burden of healthcare-associated
   padding-right: 4px;
 }
 
-#xdtmdtbicg .gt_column_spanner_outer:first-child {
+#jxhzimfcir .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xdtmdtbicg .gt_column_spanner_outer:last-child {
+#jxhzimfcir .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xdtmdtbicg .gt_column_spanner {
+#jxhzimfcir .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -334,11 +358,11 @@ Figure&nbsp;1: Workflow of the estimation of the burden of healthcare-associated
   width: 100%;
 }
 
-#xdtmdtbicg .gt_spanner_row {
+#jxhzimfcir .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#xdtmdtbicg .gt_group_heading {
+#jxhzimfcir .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -364,7 +388,7 @@ Figure&nbsp;1: Workflow of the estimation of the burden of healthcare-associated
   text-align: left;
 }
 
-#xdtmdtbicg .gt_empty_group_heading {
+#jxhzimfcir .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -379,15 +403,15 @@ Figure&nbsp;1: Workflow of the estimation of the burden of healthcare-associated
   vertical-align: middle;
 }
 
-#xdtmdtbicg .gt_from_md > :first-child {
+#jxhzimfcir .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xdtmdtbicg .gt_from_md > :last-child {
+#jxhzimfcir .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xdtmdtbicg .gt_row {
+#jxhzimfcir .gt_row {
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 5px;
@@ -406,7 +430,7 @@ Figure&nbsp;1: Workflow of the estimation of the burden of healthcare-associated
   overflow-x: hidden;
 }
 
-#xdtmdtbicg .gt_stub {
+#jxhzimfcir .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -419,7 +443,7 @@ Figure&nbsp;1: Workflow of the estimation of the burden of healthcare-associated
   padding-right: 5px;
 }
 
-#xdtmdtbicg .gt_stub_row_group {
+#jxhzimfcir .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -433,15 +457,15 @@ Figure&nbsp;1: Workflow of the estimation of the burden of healthcare-associated
   vertical-align: top;
 }
 
-#xdtmdtbicg .gt_row_group_first td {
+#jxhzimfcir .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#xdtmdtbicg .gt_row_group_first th {
+#jxhzimfcir .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#xdtmdtbicg .gt_summary_row {
+#jxhzimfcir .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -451,16 +475,16 @@ Figure&nbsp;1: Workflow of the estimation of the burden of healthcare-associated
   padding-right: 5px;
 }
 
-#xdtmdtbicg .gt_first_summary_row {
+#jxhzimfcir .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#xdtmdtbicg .gt_first_summary_row.thick {
+#jxhzimfcir .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#xdtmdtbicg .gt_last_summary_row {
+#jxhzimfcir .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -470,7 +494,7 @@ Figure&nbsp;1: Workflow of the estimation of the burden of healthcare-associated
   border-bottom-color: #D3D3D3;
 }
 
-#xdtmdtbicg .gt_grand_summary_row {
+#jxhzimfcir .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -480,7 +504,7 @@ Figure&nbsp;1: Workflow of the estimation of the burden of healthcare-associated
   padding-right: 5px;
 }
 
-#xdtmdtbicg .gt_first_grand_summary_row {
+#jxhzimfcir .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -490,7 +514,7 @@ Figure&nbsp;1: Workflow of the estimation of the burden of healthcare-associated
   border-top-color: #D3D3D3;
 }
 
-#xdtmdtbicg .gt_last_grand_summary_row_top {
+#jxhzimfcir .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -500,11 +524,11 @@ Figure&nbsp;1: Workflow of the estimation of the burden of healthcare-associated
   border-bottom-color: #D3D3D3;
 }
 
-#xdtmdtbicg .gt_striped {
+#jxhzimfcir .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xdtmdtbicg .gt_table_body {
+#jxhzimfcir .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -513,7 +537,7 @@ Figure&nbsp;1: Workflow of the estimation of the burden of healthcare-associated
   border-bottom-color: #D3D3D3;
 }
 
-#xdtmdtbicg .gt_footnotes {
+#jxhzimfcir .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -527,7 +551,7 @@ Figure&nbsp;1: Workflow of the estimation of the burden of healthcare-associated
   border-right-color: #D3D3D3;
 }
 
-#xdtmdtbicg .gt_footnote {
+#jxhzimfcir .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -536,7 +560,7 @@ Figure&nbsp;1: Workflow of the estimation of the burden of healthcare-associated
   padding-right: 5px;
 }
 
-#xdtmdtbicg .gt_sourcenotes {
+#jxhzimfcir .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -550,7 +574,7 @@ Figure&nbsp;1: Workflow of the estimation of the burden of healthcare-associated
   border-right-color: #D3D3D3;
 }
 
-#xdtmdtbicg .gt_sourcenote {
+#jxhzimfcir .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -558,72 +582,72 @@ Figure&nbsp;1: Workflow of the estimation of the burden of healthcare-associated
   padding-right: 5px;
 }
 
-#xdtmdtbicg .gt_left {
+#jxhzimfcir .gt_left {
   text-align: left;
 }
 
-#xdtmdtbicg .gt_center {
+#jxhzimfcir .gt_center {
   text-align: center;
 }
 
-#xdtmdtbicg .gt_right {
+#jxhzimfcir .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xdtmdtbicg .gt_font_normal {
+#jxhzimfcir .gt_font_normal {
   font-weight: normal;
 }
 
-#xdtmdtbicg .gt_font_bold {
+#jxhzimfcir .gt_font_bold {
   font-weight: bold;
 }
 
-#xdtmdtbicg .gt_font_italic {
+#jxhzimfcir .gt_font_italic {
   font-style: italic;
 }
 
-#xdtmdtbicg .gt_super {
+#jxhzimfcir .gt_super {
   font-size: 65%;
 }
 
-#xdtmdtbicg .gt_footnote_marks {
+#jxhzimfcir .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#xdtmdtbicg .gt_asterisk {
+#jxhzimfcir .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#xdtmdtbicg .gt_indent_1 {
+#jxhzimfcir .gt_indent_1 {
   text-indent: 5px;
 }
 
-#xdtmdtbicg .gt_indent_2 {
+#jxhzimfcir .gt_indent_2 {
   text-indent: 10px;
 }
 
-#xdtmdtbicg .gt_indent_3 {
+#jxhzimfcir .gt_indent_3 {
   text-indent: 15px;
 }
 
-#xdtmdtbicg .gt_indent_4 {
+#jxhzimfcir .gt_indent_4 {
   text-indent: 20px;
 }
 
-#xdtmdtbicg .gt_indent_5 {
+#jxhzimfcir .gt_indent_5 {
   text-indent: 25px;
 }
 
-#xdtmdtbicg .katex-display {
+#jxhzimfcir .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#xdtmdtbicg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#jxhzimfcir div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -687,7 +711,11 @@ Table&nbsp;1: Estimated median of annual burden of five types of healthcare-asso
 </div>
 </div>
 <p><a href="#tbl-contributedburden" class="quarto-xref">Table&nbsp;1</a> summarises how different infection types contributed to the total burden.</p>
-<p>As shown in <a href="#fig-results" class="quarto-xref">Figure&nbsp;2</a>, while Germany had a <strong>lower infection rate inside hospitals</strong> than the European Union average, its overall <strong>population burden</strong> was <em>higher</em> — <strong>308 DALYs per 100,000 people</strong>, compared with <strong>290 DALYs per 100,000</strong> across the EU/EEA. This indicates that Germany experiences a high burden. These results raise a key question: if infection rates are low, why is the burden still higher?</p>
+<p><em>These estimates form the basis for the following sections, which explore Germany’s overall burden, infection types, and demographic patterns.</em></p>
+</section>
+<section id="overall-burden-trends" class="level2">
+<h2 class="anchored" data-anchor-id="overall-burden-trends">Overall burden trends</h2>
+<p>As shown in <a href="#fig-results" class="quarto-xref">Figure&nbsp;2</a>, while Germany had a <strong>lower infection rate inside hospitals</strong> than the European Union average, its overall population burden was higher — 308 DALYs per 100 000 people, compared with 290 DALYs per 100 000 across the EU/EEA. This indicates that Germany experiences a high burden.</p>
 <div id="fig-results" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-results-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -698,19 +726,55 @@ Figure&nbsp;2: Annual burden of five types of healthcare-associated infections w
 </figcaption>
 </figure>
 </div>
-<p><strong>Why is Germany’s burden above the EU/EEA average?</strong></p>
-<p>Germany has one of the highest rates of hospital admissions and the largest number of acute care beds in Europe. This means more people are exposed to potential infections — even if hospitals themselves perform well on hygiene standards.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>This national overview provides the big picture. To understand where these numbers come from, we can look closer at how different infection types contribute to the total burden.</p>
+</section>
+<section id="detailed-comparison-across-infection-types" class="level2">
+<h2 class="anchored" data-anchor-id="detailed-comparison-across-infection-types">Detailed comparison across infection types</h2>
+<p>While <a href="#fig-results" class="quarto-xref">Figure&nbsp;2</a> shows the overall pattern, the numerical estimates in <a href="#fig-region" class="quarto-xref">Figure&nbsp;3</a> break down the burden by infection type. Germany’s infection rates and burden indicators were consistently higher than those of the EU/EEA across all five infections. The <strong>annual population incidence</strong> reached 592 per 100 000 in Germany versus 468 per 100 000 in the EU/EEA. Similarly, <strong>attributable deaths</strong> were 20.1 vs 15.3 per 100 000, and <strong>DALYs</strong> 308 vs 290 per 100 000.</p>
+<p>Among infection types, pneumonia (HAP) and bloodstream infections (BSI) accounted for most of the difference, driven by their higher fatality rates. By contrast, urinary tract infections (UTIs) were more frequent but caused a smaller share of DALYs, while C. difficile infections (CDI), though rarer, still added a notable contribution.</p>
+<div id="fig-region" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-region-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="region.png" class="img-fluid figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-region-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Annual burden per 100,000 population of five types of healthcare-associated infections, German PPS sample and ECDC PPS sample (EU/EEA), 2011–2012. Source: Zacher et al.&nbsp;(2019).
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="burden-by-age-and-gender" class="level2">
+<h2 class="anchored" data-anchor-id="burden-by-age-and-gender">Burden by Age and Gender</h2>
+<p>Beyond infection type, demographic factors also shape the burden. As shown in <a href="#fig-gender" class="quarto-xref">Figure&nbsp;4</a>, <strong>DALYs increase sharply with age</strong>, peaking among adults aged <strong>75–84 years</strong>. Older age groups carry the majority of total health loss, reflecting their higher hospitalisation rates and vulnerability to severe outcomes.</p>
+<p>Gender differences are smaller but consistent: across most age groups, <strong>men experience higher DALYs per 100 000 population</strong> than women. This likely reflects higher comorbidity and disease severity among men, while women’s longer life expectancy and greater representation in long-term care explain the small reversal seen at the oldest ages.</p>
+<p>Germany’s ageing population amplifies these effects, helping explain why its population-level burden remains above the EU/EEA average even when hospital infection rates are comparable.</p>
+<div id="fig-gender" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-gender-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="gender.png" class="img-fluid figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gender-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Total annual burden of five types of healthcare-associated infections stratified by age and sex, Germany (left) and EU/EEA (right), 2011–2012. Source: Zacher et al.&nbsp;(2019).
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="why-is-germanys-burden-above-the-eueea-average" class="level2">
+<h2 class="anchored" data-anchor-id="why-is-germanys-burden-above-the-eueea-average">Why is Germany’s burden above the EU/EEA average?</h2>
+<p>These results raise a key question: if infection rates are low, why is the burden still higher?</p>
+<p>Germany has one of the highest hospital admission rates and the largest number of acute care beds in Europe. This means more people are exposed to potential infections — even if hospitals themselves perform well on hygiene standards.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p>To reduce this burden, researchers recommend:</p>
 <ul>
 <li><strong>Reducing avoidable hospital stays</strong></li>
 <li><strong>Focusing further on hygiene measures</strong></li>
 <li><strong>Enhancing infection prevention and control</strong></li>
 </ul>
-<p>In conclusion, Germany’s experience shows that reducing hospital use can be as powerful as improving hygiene — and the open-source BHAI tool makes such insights measurable for every country.</p>
+<p>In conclusion, Germany’s experience shows that reducing hospital use can be as powerful as improving hygiene — and the open-source BHAI tool makes such insights measurable for every country. As up to 30% of HAIs are preventable, these findings highlight how data-driven methods can guide smarter prevention strategies across Europe.</p>
 <p>Reference:</p>
 <p>Zacher B, Haller S, Willrich N, et al.&nbsp;Application of a new methodology and R package reveals a high burden of healthcare-associated infections (HAI) in Germany compared to the average in the European Union/European Economic Area, 2011 to 2012. Euro Surveill. 2019;24(46):1900135. <a href="https://doi.org/10.2807/1560-7917.ES.2019.24.46.1900135">https://doi.org/10.2807/1560-7917.ES.2019.24.46.1900135</a></p>
 
 
+</section>
 
 
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>

@@ -5,13 +5,18 @@ project:
 website:
   title: "Shayna Yang"
   navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Blog"
+        href: blog.qmd
     right:
-      - about.qmd
+      - text: "About Me"
+        href: about.qmd
       - icon: github
         href: https://github.com/Shayna-Yang
 format:
   html:
     theme: flatly
     css: styles.css
-
 
